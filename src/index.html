@@ -6,46 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../src/styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="../src/styles/css/index.css" />
 </head>
 
 <body>
     <div class="loader-wrapper">
         <div class="loader"></div>
     </div>
-    <header>
-        <div class="side-nav"><img class="side-nav-img" src="../src/imgs/burger.svg" /></div>
-        <div class="logo">logo</div>
 
+    <header class="page-header">
+        <div class="page-header__side-nav"></div>
+        <div class="page-header__central-element">
+            <ul class="page-header__main-navigation">
+                <li class="main-navi-link">Home</li>
+                <li class="main-navi-link">News</li>
+                <li class="main-navi-link">Company</li>
+                <li class="main-navi-link">Products</li>
+            </ul>
+        </div>
 
-    </header>
-    <div id="content-main" class="content-main">
-        <div class="page-overlay"></div>
-        <div class="navigation-menu">
-            <div class="navigation-wrap">
-                <div class="navigation-logo-wrap">
-                    <a href="" class="side-menu-logo">
-                        <img class="navigation-icon--logo" src="./imgs/logo.png">
-                    </a>
+        <div class="page-header__logo-holder">
+            <a class="page-header__main-logo" href="https://www.progress.com"></a>
+        </div>
+        <div>
+            <div class="page-overlay"></div>
+            <div class="navigation-menu">
+                <div class="navigation-wrap">
                     <button type="button" class="navigation-close-btn">X</button>
                 </div>
                 <div class="navigation-elements-container">
-                    <div class="navigation-events">
-                        <div class="navigation-event-clubs">Clubs</div>
-                        <div class="navigation-event-club-name">Club 1</div>
-                        <div class="navigation-event-club-name">Club 2</div>
-                    </div>
-                    <div class="navigation-events">
-                        <div class="navigation-event-leagues">Leagues</div>
-                        <div class="navigation-event-league-name">Liga 1</div>
-                        <div class="navigation-event-league-name">Liga 2</div>
-                    </div>
                 </div>
             </div>
         </div>
-        <footer> Some links</footer>
-        <script src="../data/data.js"></script>
-        <script src="../src/js/index.js"></script>
+    </header>
+
+    <div class="content-main">
+        <div class="content-inner">
+            <div class="content-inner-wrapp">
+                <div class="content-inner__wrapp__text">
+                    <div class="content-inner-wrapp__text-section"> Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Nulla aliquam vel dolor ut eleifend.
+                        Aliquam
+                        malesuada venenatis felis, eu placerat metus sollicitudin non. Maecenas consectetur ex non ex
+                        euismod
+                        laoreet. Ut facilisis faucibus iaculis. Curabitur suscipit ac odio a laoreet. Proin efficitur
+                        ligula
+                        vel
+                        tellus porta, a tempus ligula feugiat. Suspendisse quis est eu dui consectetur mollis sit amet
+                        in
+                        quam.
+                        Quisque pulvinar venenatis nunc, ac blandit ligula auctor sed. Fusce a lacinia dui. Vestibulum
+                        vulputate
+                        massa ante, in tincidunt leo aliquam vel. Vivamus pellentesque elit nec tellus fermentum, ac
+                        tincidunt
+                        lectus luctus. Mauris eget tortor condimentum risus ornare venenatis. Suspendisse non velit
+                        iaculis,
+                        euismod
+                        eros sollicitudin, laoreet dolor. Phasellus sollicitudin laoreet magna vehicula consequat.
+                    </div>
+
+                    <div class="content-inner-wrapp__text-section">
+                        Fusce malesuada ac urna quis imperdiet. Ut ut ex consequat, gravida mi sed, cursus tellus. Nulla
+                        sagittis,
+                        ex eget iaculis elementum, est tellus blandit justo, eu venenatis velit tortor ac tortor. In
+                        fringilla
+                        scelerisque eleifend. Nulla ac condimentum neque. Pellentesque volutpat turpis in ante aliquet,
+                        in
+                        volutpat
+                        elit sollicitudin. Ut viverra odio nec nunc laoreet vestibulum. Vivamus elit tortor, euismod
+                        eget
+                        dignissim
+                        in, interdum id ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        inceptos
+                        himenaeos. Duis finibus pharetra diam, quis blandit ex luctus vel. Pellentesque nisl ligula,
+                        elementum
+                        maximus mauris a, consectetur faucibus dolor. Vestibulum ante ipsum primis in faucibus orci
+                        luctus
+                        et
+                        ultrices posuere cubilia Curae; Donec cursus, neque ut egestas semper, lectus justo varius
+                        ligula,
+                        ac
+                        accumsan nulla ipsum a odio. Sed nec sapien non quam malesuada aliquet quis ut urna.
+                    </div>
+
+                    <div class="content-inner-wrapp__text-section">
+                        Nulla facilisi. In malesuada ultrices dolor, non facilisis nisl gravida ac. Praesent laoreet
+                        lacus
+                        nec
+                        egestas iaculis. Praesent commodo sapien consectetur turpis varius, nec tincidunt magna posuere.
+                        Maecenas
+                        neque ligula, vulputate id mi eget, accumsan pellentesque libero. Curabitur consectetur arcu nec
+                        tortor
+                        vehicula, non feugiat ex maximus. Donec ut cursus dolor. Aliquam erat volutpat. Mauris ac
+                        condimentum
+                        sapien, a mollis libero. Vivamus feugiat, sapien id mattis molestie, purus augue pharetra
+                        lectus,
+                        vitae
+                        scelerisque est sapien a risus. Maecenas imperdiet risus suscipit sem suscipit, quis dictum erat
+                        pharetra.
+                        Cras quis sollicitudin lorem. Praesent vitae blandit quam. Suspendisse libero risus, fringilla
+                        quis
+                        auctor
+                        a, rutrum a eros. Donec sit amet nunc diam. Cras malesuada sapien eget sapien egestas, vel
+                        auctor
+                        augue
+                        tempus.
+                    </div>
+                    <div class="content-inner-wrapp__text-section">
+                        Nulla euismod sagittis viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                        at
+                        dui
+                        pretium, condimentum ex nec, suscipit augue. Phasellus sit amet sagittis arcu. Fusce nec viverra
+                        ex.
+                        Cras in
+                        diam ac erat posuere tincidunt quis in mauris. Duis ac lorem sed est tristique volutpat.
+
+                        Donec eu scelerisque elit. Suspendisse venenatis id ante auctor bibendum. Integer in volutpat
+                        justo.
+                        In
+                        non
+                        eleifend orci, eu aliquam velit. Fusce id finibus orci. Mauris purus magna, iaculis sed
+                        ultricies
+                        sit
+                        amet,
+                        dignissim scelerisque ante. Suspendisse quis risus vitae magna volutpat finibus. Nullam euismod,
+                        risus
+                        eu
+                        malesuada imperdiet, augue risus sodales dui, sed suscipit quam eros non dui.
+                    </div>
+                </div>
+            </div>
+            <div class="content-inner__side-menu">
+                <div>Click to open</div>
+                <div>Click to open</div>
+                <div>Click to close</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-container__links">
+            <a class="social-icon social-icon-fb" href="https://www.facebook.com"></a>
+            <a class="social-icon social-icon-twitter" href="https://www.twitter.com"></a>
+            <a class="social-icon social-icon-google" href="#"></a>
+        </div>
+        <div class="back-to-top">TOP
+            <span class="spas"></span>
+        </div>
+    </footer>
+    <script src="../data/data.js"></script>
+    <!-- <script src="../src/js/index_es5.js"></script> -->
+    <script src="../src/js/index_es6.js"></script>
 </body>
 
 </html>

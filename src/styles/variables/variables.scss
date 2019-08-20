@@ -1,5 +1,5 @@
 $primary-color: #fff;
-
+$background__BODY: #141414 url("../../imgs/bgr.png") no-repeat top center fixed;
 //header
 $background-color__HEADER: #141414;
 
@@ -7,3 +7,14 @@ $background-color__HEADER: #141414;
 $background-color__TABLE__table-header: #434343;
 $border__TABLE: 1px solid #434343;
 $background-color__TABLE__table-container: #141414;
+
+//overlay
+$background-color__OVERLAY: rgba(0, 0, 0, 0.5);
+
+//nav menu
+$color__NAV: $primary-color;
+$background-color__NAV: #3d3d3d;
+
+
+//loader
+$loader: #ff7500;
