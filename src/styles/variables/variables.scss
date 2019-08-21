@@ -1,10 +1,19 @@
 $primary-color: #fff;
+$primary-background-color: #141414;
 $background__BODY: #141414 url("../../imgs/bgr.png") no-repeat top center fixed;
 //header
 $background-color__HEADER: #141414;
+$backgorund-color__HEADER__main-navi-link--hover: linear-gradient(to right, #ff7500, #da1b60);
+$background-color__HEADER__page-header-dropdown-inner: #666;
+
+//main content
+$background-color__content-inner-wrapp: $primary-background-color;
+$background-color__content-inner__side-menu: #3d3d3d;
+
 
 //table
 $background-color__TABLE__table-header: #434343;
+$border__TABLE__table-header: 1px solid #666;
 $border__TABLE: 1px solid #434343;
 $background-color__TABLE__table-container: #141414;
 
@@ -13,8 +22,13 @@ $background-color__OVERLAY: rgba(0, 0, 0, 0.5);
 
 //nav menu
 $color__NAV: $primary-color;
+$border-bottom__NAV__side-menu__element: 1px solid $primary-color;
+$border-left__NAV__side-menu__element-title--after: 6px solid transparent;
+$border-right__NAV__side-menu__element-title--after: 6px solid transparent;
+$border-bottom__NAV__side-menu__element-title--after: 6px solid $primary-color;
 $background-color__NAV: #3d3d3d;
 
-
-//loader
-$loader: #ff7500;
+//footer
+$background-color__FOOTER: $backgorund-color__HEADER__main-navi-link--hover;
+$background-color__FOOTER__back-to-top: #666;
+$background-color__FOOTER__arrow-top: $primary-color;
