@@ -45,12 +45,6 @@ class Grid {
         return tr;
     };
 
-    // buildHeader() {
-    //     let thead = this.html.div.cloneNode();
-    //     thead.appendChild(this.buildRow(this.data.keys, "div", { 'data-action': 'sortBy', "class": "table-container__header" }));
-    //     return thead;
-    // };
-
     buildBody(data) {
         let tbody = this.html.div.cloneNode();
         tbody.appendChild(this.buildRow(this.data.keys, "div", { 'data-action': 'sortBy', "class": "table-container__header" }));
@@ -66,7 +60,6 @@ class Grid {
         let table = this.html.div.cloneNode();
         this.applyAttr(table, { "class": "table" });
         this.applyAttr(this.html.output, { "class": "content-inner__table-container" })
-        // table.appendChild(this.buildHeader());
         table.appendChild(this.buildBody(this.data.initial.projects));
         this.html.output.appendChild(table);
         return this.html.output;
@@ -151,12 +144,6 @@ class Grid {
         });
     }
 }
-
-// window.addEventListener('load', function () {
-//     let loader = document.body.getElementsByClassName("loader-wrapper")[0];
-//     document.body.removeChild(loader);
-// });
-
 
 function getDivElement(el) {
     return document.body.getElementsByClassName(el)[0];
