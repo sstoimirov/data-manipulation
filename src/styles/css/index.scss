@@ -389,7 +389,7 @@ body {
         &>.main-navi-link {
 
             &:hover {
-                background-color: $backgorund-color__HEADER__main-navi-link--hover;
+                background: $backgorund-color__HEADER__main-navi-link--hover;
             }
 
             &:hover .page-header-dropdown-inner {

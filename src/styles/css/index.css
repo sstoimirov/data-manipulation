@@ -369,7 +369,7 @@ body {
 }
 @media (min-width: 1281px) {
   .page-header__main-navigation > .main-navi-link:hover {
-    background-color: linear-gradient(to right, #ff7500, #da1b60);
+    background: linear-gradient(to right, #ff7500, #da1b60);
   }
   .page-header__main-navigation > .main-navi-link:hover .page-header-dropdown-inner {
     display: block;
