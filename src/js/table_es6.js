@@ -60,7 +60,9 @@ class Grid {
 
     infiniteScroll() {
         getDivElement("content-inner").addEventListener("scroll", this.checkForNewEl);
-
+        
+        //mobile devices
+        getDivElement("content-inner").addEventListener("touchmove", this.checkForNewEl);
     };
     
     checkForNewEl() {
@@ -73,7 +75,7 @@ class Grid {
             var newEl = document.createElement("div");
             newEl.setAttribute("class", "table-elements-container");
             newEl.innerHTML = this.children[0].children[1].children[1].firstChild.innerHTML;
-            document.getElementsByClassName("table-body")[0].appendChild(newEl);
+            getDivElement("table-body").appendChild(newEl);
         }
     };
 
@@ -115,7 +117,7 @@ class Grid {
     };
 
     append() {
-        document.getElementsByClassName("content-inner-wrapp")[0].appendChild(this.html.output);
+        getDivElement("content-inner-wrapp").appendChild(this.html.output);
     };
 
     showMenu() {
@@ -137,7 +139,7 @@ class Grid {
     };
 
     getToTop() {
-        let button = document.getElementsByClassName("back-to-top")[0];
+        let button = getDivElement("back-to-top");
         button.addEventListener("click", function () {
             scrollTo({
                 top: 0,
@@ -161,8 +163,8 @@ class Grid {
     scrollTop() {
         window.addEventListener("scroll", function () {
             let height = window.innerHeight < window.pageYOffset;
-            height ? document.body.getElementsByClassName("back-to-top")[0].classList.add("isShown") :
-                document.body.getElementsByClassName("back-to-top")[0].classList.remove("isShown")
+            height ? getDivElement("back-to-top").classList.add("isShown") :
+            getDivElement("back-to-top").classList.remove("isShown")
         });
     };
 };
