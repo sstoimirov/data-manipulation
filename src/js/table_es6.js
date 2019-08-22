@@ -33,22 +33,24 @@ class Grid {
     };
 
     buildRow(data, type, attr) {
-        let tr = this.html.div.cloneNode(), i;
-        this.applyAttr(tr, { "class": "table-elements-container" })
+        let div = this.html.div.cloneNode(), i;
+        this.applyAttr(div, { "class": "table-elements-container" })
         for (i in data) {
-            tr.appendChild(
-                this.buildCell(
-                    type, data[i], attr
-                )
-            );
+            div.appendChild(this.buildCell(type, data[i], attr));
         }
-        return tr;
+        return div;
     };
+
+    buildHeader() {
+        let thead = this.html.div.cloneNode();
+        this.applyAttr(thead, { "class": "table-header" })
+        thead.appendChild(this.buildRow(this.data.keys, "div", { "class": "table-container__header" }));
+        return thead
+    }
 
     buildBody(data) {
         let tbody = this.html.div.cloneNode();
-        tbody.appendChild(this.buildRow(this.data.keys, "div", { 'data-action': 'sortBy', "class": "table-container__header" }));
-        this.applyAttr(tbody, { "id": "table-body" });
+        this.applyAttr(tbody, { "class": "table-body" });
 
         for (let i = 0; i < data.length; i++) {
             tbody.appendChild(this.buildRow(data[i], 'div', { "class": "table-container__data" }))
@@ -56,14 +58,33 @@ class Grid {
         return tbody;
     };
 
+    infiniteScroll() {
+        getDivElement("content-inner").addEventListener("scroll", this.checkForNewEl);
+
+    };
+    
+    checkForNewEl() {
+        let el = document.querySelector(".table-elements-container:last-child");
+        let scrollY = el.scrollHeight - el.scrollTop;
+        let height = el.offsetHeight;
+        let pageOffset = height - scrollY;
+
+        if (pageOffset === 0 || pageOffset === 1) {
+            var newEl = document.createElement("div");
+            newEl.setAttribute("class", "table-elements-container");
+            newEl.innerHTML = this.children[0].children[1].children[1].firstChild.innerHTML;
+            document.getElementsByClassName("table-body")[0].appendChild(newEl);
+        }
+    };
+
     build() {
-        let table = this.html.div.cloneNode();
-        this.applyAttr(table, { "class": "table" });
-        this.applyAttr(this.html.output, { "class": "content-inner__table-container" })
-        table.appendChild(this.buildBody(this.data.initial.projects));
-        this.html.output.appendChild(table);
-        return this.html.output;
-    }
+        let container = this.html.output;
+        container.appendChild(this.buildHeader());
+        container.appendChild(this.buildBody(this.data.initial.projects));
+        this.applyAttr(container, { "class": "content-inner__table-container" });
+
+        return container;
+    };
 
     init(url) {
         this.data = Object.create(null);
@@ -122,9 +143,9 @@ class Grid {
                 top: 0,
                 left: 0,
                 behavior: "smooth"
-            })
-        })
-    }
+            });
+        });
+    };
 
     run() {
         this.getKeys();
@@ -134,7 +155,8 @@ class Grid {
         this.showMenu();
         this.getToTop();
         this.scrollTop();
-    }
+        this.infiniteScroll()
+    };
 
     scrollTop() {
         window.addEventListener("scroll", function () {
@@ -142,16 +164,16 @@ class Grid {
             height ? document.body.getElementsByClassName("back-to-top")[0].classList.add("isShown") :
                 document.body.getElementsByClassName("back-to-top")[0].classList.remove("isShown")
         });
-    }
-}
+    };
+};
 
 function getDivElement(el) {
     return document.body.getElementsByClassName(el)[0];
-}
+};
 
 function getHtmlElement(el) {
     return document.getElementsByTagName(el)[0];
-}
+};
 
 let obj = new Grid();
-obj.init("https://gist.githubusercontent.com/elena-gancheva/e2af742be620fefa0b0d81e36f7cd66c/raw/1407c899e0a1baca8cd9564f6d9668fd7e8909a6/data.json")
+obj.init("https://gist.githubusercontent.com/elena-gancheva/e2af742be620fefa0b0d81e36f7cd66c/raw/1407c899e0a1baca8cd9564f6d9668fd7e8909a6/data.json");

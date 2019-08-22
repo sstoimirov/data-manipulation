@@ -23,6 +23,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
+    color: $color__HEADER__page-header-dropdown-inner;
     background-color: $background-color__HEADER__page-header-dropdown-inner;
 }
 
@@ -31,8 +32,8 @@ body {
 }
 
 .page-header {
-    position: fixed;
     display: flex;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -56,8 +57,6 @@ body {
         display: inline-block;
         position: relative;
         padding: 30px;
-
-
     }
 }
 
@@ -69,7 +68,6 @@ body {
 }
 
 //main content
-
 .content-main {
     min-width: 1200px;
     max-width: 1688px;
@@ -77,21 +75,19 @@ body {
 }
 
 .content-inner {
-    // display: flex;
-    // margin-top: 100px;
     display: flex;
     height: 700px;
     margin-top: 100px;
     overflow-y: scroll;
+    background-color: $background-color__content-inner;
 }
 
 .content-inner-wrapp {
-    padding: 30px;
     text-align: center;
-    background-color: $background-color__content-inner-wrapp;
 }
 
 .content-inner__wrapp-text {
+    padding: 30px 30px 0;
     font-size: 14px;
 }
 
@@ -107,7 +103,7 @@ body {
     position: relative;
     width: 100%;
     flex: 1;
-    background: $background-color__content-inner__side-menu;
+    background-color: $background-color__content-inner__side-menu;
 }
 
 .table-container__data {
@@ -126,11 +122,11 @@ body {
 }
 
 .content-inner__table-container {
+    padding: 30px;
     background-color: $background-color__TABLE__table-container;
 }
 
 //side navigation
-
 .navigation-menu {
     position: fixed;
     top: 0;
@@ -171,7 +167,6 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
-
 .side-menu-active .page-overlay {
     display: block;
 }
@@ -183,8 +178,8 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: $background-color__OVERLAY;
     transition: opacity 0.25s ease-in-out;
+    background-color: $background-color__OVERLAY;
 }
 
 .page-header__side-nav {
@@ -192,7 +187,7 @@ body {
     width: 20px;
     margin-left: 30px;
     cursor: pointer;
-    background-image: url("../../imgs/burger.svg")
+    background: $background__NAV__page-header__side-nav;
 }
 
 .side-menu__element {
@@ -210,11 +205,11 @@ body {
         height: 0;
         top: 50%;
         right: 5px;
+        transform: translateY(-50%);
+        transition: transform 1s ease;
         border-right: $border-right__NAV__side-menu__element-title--after;
         border-left: $border-left__NAV__side-menu__element-title--after;
         border-bottom: $border-bottom__NAV__side-menu__element-title--after;
-        transform: translateY(-50%);
-        transition: transform 1s ease;
     }
 }
 
@@ -239,15 +234,14 @@ body {
 }
 
 //footer
-
 .footer-container {
     display: flex;
-    background: $background-color__FOOTER;
+    width: 100%;
+    bottom: 0;
     padding: 20px;
     position: fixed;
-    bottom: 0;
     box-sizing: border-box;
-    width: 100%;
+    background: $background-color__FOOTER;
 }
 
 .footer-container__links {
@@ -261,15 +255,14 @@ body {
 }
 
 .back-to-top {
-    cursor: pointer;
     display: none;
     position: fixed;
     top: 80%;
     right: 0;
     padding: 20px;
+    cursor: pointer;
     border-radius: 12px;
     background-color: $background-color__FOOTER__back-to-top;
-
 }
 
 .arrow-top {
@@ -315,15 +308,15 @@ body {
 }
 
 .social-icon-fb {
-    background-image: url("../../imgs/facebook.svg")
+    background-image: $background-image__FB;
 }
 
 .social-icon-twitter {
-    background-image: url("../../imgs/twitter.svg")
+    background-image: $background-image__TW;
 }
 
 .social-icon-google {
-    background-image: url("../../imgs/google-plus.svg")
+    background-image: $background-image__GO;
 }
 
 .table-elements-container {
@@ -332,7 +325,6 @@ body {
     overflow: hidden;
     grid-template-rows: 50px;
 }
-
 
 .table-elements-container:first-child {
     overflow: hidden;
@@ -396,12 +388,23 @@ body {
         &>.main-navi-link {
 
             &:hover {
-                background: $backgorund-color__HEADER__main-navi-link--hover
+                background-color: $backgorund-color__HEADER__main-navi-link--hover;
             }
 
             &:hover .page-header-dropdown-inner {
-                display: block
+                display: block;
             }
         }
+    }
+
+    .page-header-dropdown-inner__element {
+        &:hover {
+            color: $color__HEADER__page-header-dropdown-inner__element--hover;
+            background: $background-color__HEADER__page-header-dropdown-inner__element--hover;
+        }
+    }
+
+    .table-container__data{
+        padding: 15px;
     }
 }
