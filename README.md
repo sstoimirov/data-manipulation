@@ -4,4 +4,5 @@
 - Simple example for infinite scroll.
 - Scroll to top functionallity on Mobile devices.
 - Side navigation contains Accordion menu with animation.
+- Custom scrollbar implemented.
 - For styles adjustment: SASS
