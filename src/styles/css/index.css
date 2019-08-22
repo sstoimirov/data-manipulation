@@ -369,7 +369,7 @@ body {
 }
 @media (min-width: 1281px) {
   .page-header__main-navigation > .main-navi-link:hover {
-    background-color: linear-gradient(to right, #ff7500, #da1b60);
+    background: linear-gradient(to right, #ff7500, #da1b60);
   }
   .page-header__main-navigation > .main-navi-link:hover .page-header-dropdown-inner {
     display: block;
@@ -383,6 +383,20 @@ body {
   .table-container__data {
     padding: 15px;
   }
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to right, #ff7500, #da1b60);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

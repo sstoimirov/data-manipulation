@@ -389,7 +389,7 @@ body {
         &>.main-navi-link {
 
             &:hover {
-                background-color: $backgorund-color__HEADER__main-navi-link--hover;
+                background: $backgorund-color__HEADER__main-navi-link--hover;
             }
 
             &:hover .page-header-dropdown-inner {
@@ -405,7 +405,22 @@ body {
         }
     }
 
-    .table-container__data{
+    .table-container__data {
         padding: 15px;
     }
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    box-shadow: $box-shadow__SCROLLB;
+    background: $background__SCROLLB;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: $box-shadow__SCROLLB-track;
+    border-radius: 10px;
 }

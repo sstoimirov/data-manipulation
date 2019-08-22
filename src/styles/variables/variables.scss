@@ -41,3 +41,8 @@ $background-color__FOOTER__arrow-top: $primary-color;
 $background-image__FB: url("../../imgs/facebook.svg");
 $background-image__TW: url("../../imgs/twitter.svg");
 $background-image__GO: url("../../imgs/google-plus.svg");
+
+//scrollbar
+$box-shadow__SCROLLB: inset 2px 2px 2px rgba(255, 255, 255, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+$background__SCROLLB: $backgorund-color__HEADER__main-navi-link--hover;
+$box-shadow__SCROLLB-track: inset 0 0 5px grey;
