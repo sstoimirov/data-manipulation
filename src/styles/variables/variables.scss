@@ -1,15 +1,18 @@
 $primary-color: #fff;
 $primary-background-color: #141414;
 $background__BODY: #141414 url("../../imgs/bgr.png") no-repeat top center fixed;
+
 //header
 $background-color__HEADER: #141414;
 $backgorund-color__HEADER__main-navi-link--hover: linear-gradient(to right, #ff7500, #da1b60);
+$color__HEADER__page-header-dropdown-inner: #999;
+$color__HEADER__page-header-dropdown-inner__element--hover: #fff;
 $background-color__HEADER__page-header-dropdown-inner: #666;
+$background-color__HEADER__page-header-dropdown-inner__element--hover: $backgorund-color__HEADER__main-navi-link--hover;
 
 //main content
-$background-color__content-inner-wrapp: $primary-background-color;
+$background-color__content-inner: $primary-background-color;
 $background-color__content-inner__side-menu: #3d3d3d;
-
 
 //table
 $background-color__TABLE__table-header: #434343;
@@ -27,8 +30,14 @@ $border-left__NAV__side-menu__element-title--after: 6px solid transparent;
 $border-right__NAV__side-menu__element-title--after: 6px solid transparent;
 $border-bottom__NAV__side-menu__element-title--after: 6px solid $primary-color;
 $background-color__NAV: #3d3d3d;
+$background__NAV__page-header__side-nav: url("../../imgs/burger.svg") 100% no-repeat;
 
 //footer
 $background-color__FOOTER: $backgorund-color__HEADER__main-navi-link--hover;
 $background-color__FOOTER__back-to-top: #666;
 $background-color__FOOTER__arrow-top: $primary-color;
+
+//icons 
+$background-image__FB: url("../../imgs/facebook.svg");
+$background-image__TW: url("../../imgs/twitter.svg");
+$background-image__GO: url("../../imgs/google-plus.svg");
